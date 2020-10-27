@@ -1,0 +1,12 @@
+C:\Users\conso\source\repos\AppQL\AppQL\bin\Debug\AppQL.exe
+C:\Users\conso\source\repos\AppQL\AppQL\bin\Debug\AppQL.exe.config
+C:\Users\conso\source\repos\AppQL\AppQL\obj\Debug\AppQL.Form_DangKy.resources
+C:\Users\conso\source\repos\AppQL\AppQL\obj\Debug\AppQL.Form_dangNhap.resources
+C:\Users\conso\source\repos\AppQL\AppQL\obj\Debug\AppQL.Properties.Resources.resources
+C:\Users\conso\source\repos\AppQL\AppQL\obj\Debug\AppQL.Form_QuanLy.resources
+C:\Users\conso\source\repos\AppQL\AppQL\obj\Debug\AppQL.csproj.GenerateResource.cache
+C:\Users\conso\source\repos\AppQL\AppQL\obj\Debug\AppQL.csproj.CoreCompileInputs.cache
+C:\Users\conso\source\repos\AppQL\AppQL\obj\Debug\AppQL.exe
+C:\Users\conso\source\repos\AppQL\AppQL\obj\Debug\AppQL.pdb
+C:\Users\conso\source\repos\AppQL\AppQL\bin\Debug\AppQL.pdb
+C:\Users\conso\source\repos\AppQL\AppQL\obj\Debug\AppQL.csprojAssemblyReference.cache
