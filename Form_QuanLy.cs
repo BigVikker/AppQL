@@ -99,5 +99,101 @@ namespace AppQL
         {
 
         }
+        private void disableAllbtn()
+        {
+            button_loiNhuan.Enabled = false;
+            button_nhapHang.Enabled = false;
+            button_xuatHang.Enabled = false;
+            button_tongKetKho.Enabled = false;
+
+        }
+        private void enableAllbtn()
+        {
+            button_loiNhuan.Enabled = true;
+            button_nhapHang.Enabled = true;
+            button_xuatHang.Enabled = true;
+            button_tongKetKho.Enabled = true;
+
+        }
+
+        private void button_themPhieuNhap_Click(object sender, EventArgs e)
+        {
+            disableAllbtn();
+            label_danhSach.Text = "Tạo Phiếu Nhập";
+            label_ngayNhap.Text = "Ngày Nhập";
+            label_gia.Text = "Giá Nhập";
+            dataGridView_fromDataBase.Hide();
+
+            /// thêm vào trong combo box loại trái cai từ data base
+            /// foreach a in loaiQua{
+            comboBox_loaiQua.Items.Add("Cam");
+            //}
+
+            panel_nhapXuat.Show();
+        }
+        private void button_themPhieuXuat_Click(object sender, EventArgs e)
+        {
+            disableAllbtn();
+            label_danhSach.Text = "Tạo Phiếu Xuất";
+            label_ngayNhap.Text = "Ngày Xuất";
+            label_gia.Text = "Giá Xuất";
+            dataGridView_fromDataBase.Hide();
+
+            /// thêm vào trong combo box loại trái cai từ data base
+            /// foreach a in loaiQua{
+            comboBox_loaiQua.Items.Add("Cam");
+            //}
+            panel_nhapXuat.Show();
+        }
+
+        private void panelReturnstats()
+        {
+            dateTimePicker_nhapXuat.Value = DateTime.Today;
+            comboBox_loaiQua.Items.Clear();
+            numericUpDown_soLuong.Value = 0;
+            numericUpDown_gia.Value = 0;
+            textBox_ID_coSo.Text = "";
+
+        }
+        private void button_tao_Click(object sender, EventArgs e)
+        {
+            if (button_nhapHang.BackColor == Color.Orange)
+            {
+                //La tao phieu nhap
+
+                MessageBox.Show("Thành Công Tạo Phiếu Nhập !", "Thành Công !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                label_danhSach.Text = "Danh sách nhập hàng";
+            }
+            else
+            {
+                // la tao phieu xuat
+                MessageBox.Show("Thành Công Tạo Phiếu Xuất !", "Thành Công !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                label_danhSach.Text = "Danh sách xuất hàng";
+            }
+            panelReturnstats();
+            panel_nhapXuat.Hide();
+            // update lai dataGripView de hien
+            dataGridView_fromDataBase.Show();
+            enableAllbtn();
+            return;
+        }
+
+        private void button_huyNhapXuat_Click(object sender, EventArgs e)
+        {
+            if (button_nhapHang.BackColor == Color.Orange)
+            {
+                label_danhSach.Text = "Danh sách nhập hàng";
+            }
+            else
+            {
+                label_danhSach.Text = "Danh sách xuất hàng";
+            }
+            panelReturnstats();
+            panel_nhapXuat.Hide();
+            dataGridView_fromDataBase.Show();
+            enableAllbtn();
+            return;
+        }
     }
 }
